@@ -68,4 +68,32 @@ public class tessOCR {
 
     }
 
+    public String getResults(Bitmap croppedImgBitmap) {
+        mTess.setImage(croppedImgBitmap);
+        String result = "";
+        String fullText = mTess.getUTF8Text();
+
+
+        String[] lines = fullText.split("\\n");
+        String line2;
+        if (lines.length > 1)
+            line2 = lines[1];
+
+        else if (lines.length == 1)
+            line2 = lines[0];
+
+        else
+            return null;
+
+        line2 = line2.replaceAll("\\s", "");
+        Pattern pattern = Pattern.compile("(1[0-9]{6})");
+        Matcher matcher = pattern.matcher(line2);
+
+        if (matcher.find()) {
+            result = matcher.group(1);
+        }
+
+        return result;
+    }
+    
 }
