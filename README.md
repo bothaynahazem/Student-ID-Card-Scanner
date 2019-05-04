@@ -1,4 +1,14 @@
 # StudentIDCardScanner
+The application mainly deals with two types of cards; Engineering ASU student cards and Metro Students cards. Then after scanning the card, it extracts information about the card's holder using the code on the card.
+
+### The application's uses:
+The Engineering ASU card inspection could prove useful for:
+  - The security at the gates of campus
+  - TAs or professors who need quick access to a student's info when they only have their ID card at hand
+  
+The metro card inspection could prove useful for:
+  - The security if they wish to inspect a certain student and know from which university he/she is from
+  - Students themselves if they wish to know how many trips left they have in their subscription.
 
 ### The application's pipeline is as follows:
 1. Choose a photo of the card (The photo is acquired either using the mobile's built-in camera or simply chosen from gallery)
