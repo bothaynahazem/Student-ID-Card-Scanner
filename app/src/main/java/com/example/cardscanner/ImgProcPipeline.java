@@ -364,6 +364,44 @@ public class ImgProcPipeline {
         Imgproc.warpAffine(src, dst, M, newSize);
 
     }
+    /*  For the OCR function  */
+    public static Bitmap getCroppedImg() {
+        Rect rectCrop = new Rect(180, 250, 520, 300);
+        Mat croppedImage = new Mat(scannedCardMat, rectCrop);
+
+        croppedImgBitmap = null;
+        croppedImgBitmap = Bitmap.createBitmap(croppedImage.width(), croppedImage.height(), Bitmap.Config.ARGB_8888);
+        Utils.matToBitmap(croppedImage, croppedImgBitmap);
+
+        return croppedImgBitmap;
+    }
+
+
+    /*  Specifying the New height resizing level as well as the final width and height of the card to be scanned  */
+    public static void scanCard(Mat inputImg, Mat outputImg, double NEW_HEIGHT, int FINAL_WIDTH, int FINAL_HEIGHT) {
+        Mat origImg = new Mat();
+        inputImg.copyTo(origImg);
+
+        Mat rotatedInputImg = new Mat();
+        rotateImg(inputImg, rotatedInputImg);
+
+        Mat rotatedOrigImg = new Mat();
+        rotateImg(inputImg, rotatedOrigImg);
+
+        MatOfPoint2f cardFourPtsContour = getFourBoundaryPts(rotatedInputImg, NEW_HEIGHT);
+
+        if (cardFourPtsContour != null)
+            transformCardToRect(rotatedOrigImg, outputImg, cardFourPtsContour, FINAL_WIDTH, FINAL_HEIGHT);
+        else
+            return;
+
+        currentBitmap = Bitmap.createBitmap(outputImg.width(), outputImg.height(), Bitmap.Config.ARGB_8888);
+        Utils.matToBitmap(outputImg, currentBitmap);
+
+        scannedCardMat = new Mat();
+        Bitmap bm = currentBitmap.copy(Bitmap.Config.ARGB_8888, true);
+        Utils.bitmapToMat(bm, scannedCardMat); //for OCR
+    }
 
     
     
