@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/padALL"
+    tools:context=".ReviewScannedCard">
+
+
+    <LinearLayout
+        android:id="@+id/ll_review_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="The scanned card:" />
+
+        <ImageView
+            android:id="@+id/img_scanned_card"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="30dp"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[0]" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:text="Choose the type of card:" />
+
+        <RadioGroup
+            android:id="@+id/rgrp_type_of_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp">
+
+            <RadioButton
+                android:id="@+id/eng_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Engineering ASU Card" />
+
+            <RadioButton
+                android:id="@+id/metro_card"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Metro Card" />
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/btn_inspect_card_from_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:text="Inspect card" />
+
+        <!--<Button-->
+            <!--android:id="@+id/btn_save_to_gallery"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:drawableEnd="@android:drawable/ic_menu_save"-->
+            <!--android:text="Save to gallery" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>
+

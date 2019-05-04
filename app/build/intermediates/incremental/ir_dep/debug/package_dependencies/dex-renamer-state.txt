@@ -1,0 +1,4 @@
+#Thu May 02 21:31:38 EET 2019
+base.0=/home/bothaynahazem/Android/CardScanner/app/build/intermediates/transforms/dexMerger/debug/10
+path.0=classes.dex
+renamed.0=classes.dex

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="padALL">26dp</dimen>
+    <dimen name="inspect_header_size">15sp</dimen>
+    <dimen name="inspect_info_size">20sp</dimen>
+
+</resources>

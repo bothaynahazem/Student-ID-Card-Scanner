@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Card Scanner</string>
+    <string name="no_photo_chosen">Please choose or take a photo first!</string>
+    <string name="photo_added_success">Successfully added photo!</string>
+    <string name="toast_no_scanned_img">Sorry but our app failed to scan the photo you took! :( \nMaybe take another one?</string>
+    <string name="toast_no_face_found">Couldn\'t recognize a face in the card! \nCan you take another photo to try again?</string>
+    <string name="toast_no_info_inspected">Couldn\'t inspect card! \nMaybe something wrong with its photo?</string>
+    <string name="toast_no_card_chosen">Please choose a card type first!</string>
+    <string name="toast_saved_to_gallery">Scanned card saved to gallery!</string>
+    <string name="toast_student_not_found">Student code not found!</string>
+    <string name="toast_processing_img">Processing your image...</string>
+    <string name="toast_processing_img_still">Still processing your image...</string>
+</resources>

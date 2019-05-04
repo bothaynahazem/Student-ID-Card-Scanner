@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/padALL"
+    tools:context=".CardInspection">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="10dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/img_the_face_photo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/padALL"
+            tools:srcCompat="@tools:sample/backgrounds/scenic[0]" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Name:"
+            android:textSize="@dimen/inspect_header_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_stud_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/WineRed"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/inspect_info_size"
+            android:textSize="@dimen/inspect_info_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Code:"
+            android:textSize="@dimen/inspect_header_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_stud_code"
+            android:layout_width="wrap_content"
+            android:textColor="@color/WineRed"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/inspect_info_size"
+            android:textSize="@dimen/inspect_info_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Year:"
+            android:textSize="@dimen/inspect_header_size"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_stud_year"
+            android:textColor="@color/WineRed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/inspect_info_size"
+            android:textSize="@dimen/inspect_info_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Section:"
+            android:textSize="@dimen/inspect_header_size"
+
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_stud_section"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textColor="@color/WineRed"
+            android:layout_marginBottom="@dimen/inspect_info_size"
+            android:textSize="@dimen/inspect_info_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="BN:"
+            android:textSize="@dimen/inspect_header_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_stud_bn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/WineRed"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/inspect_info_size"
+            android:textSize="@dimen/inspect_info_size" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Grade:"
+            android:textSize="@dimen/inspect_header_size"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_stud_grade"
+            android:layout_width="wrap_content"
+            android:textColor="@color/WineRed"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="@dimen/inspect_info_size" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,19 @@
+#Internal package file, do not edit.
+#Wed May 01 23:24:02 EET 2019
+1.base=/home/bothaynahazem/Android/CardScanner/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+2.path=tessdata/eng.traineddata
+0.baseType=DIRECTORY
+3.baseType=DIRECTORY
+2.base=/home/bothaynahazem/Android/CardScanner/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+3.set=ASSET
+2.set=ASSET
+1.baseType=DIRECTORY
+3.path=JSON/CSE19_NamesList.json
+count=4
+1.set=ASSET
+0.path=JSON/Metro_NamesList.json
+3.base=/home/bothaynahazem/Android/CardScanner/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+0.set=ASSET
+0.base=/home/bothaynahazem/Android/CardScanner/app/build/intermediates/merged_assets/debug/mergeDebugAssets/out
+2.baseType=DIRECTORY
+1.path=tessdata/ara.traineddata

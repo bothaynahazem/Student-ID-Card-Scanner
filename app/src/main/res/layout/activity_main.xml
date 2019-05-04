@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="84dp"
+            android:layout_marginBottom="50dp"
+            android:gravity="center"
+            android:text="STUDENT ID\n CARD SCANNER "
+            android:textColor="@android:color/black"
+            android:textSize="30dp"
+            android:textStyle="italic" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_choose_from_gallery"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padALL"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btn_choose_from_gallery"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:drawableStart="@android:drawable/ic_menu_gallery"
+                android:text="Choose a photo from gallery" />
+
+            <Button
+                android:id="@+id/btn_take_photo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableStart="@android:drawable/ic_menu_camera"
+                android:text="Take photo" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/padALL"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_review_scanned"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View scanned card" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progress_circular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="500dp"
+        android:visibility="invisible" />
+
+</RelativeLayout>
