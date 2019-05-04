@@ -21,3 +21,6 @@
 - Ziad Hesham (**43787**)
 - Marina Saad (**43850**)
 - Mohamed Abdelrahim (**43869**)
+
+
+PS. The **OpenCV** and **tess-two** library folders that were used in the app weren't added because they're too large and irrelevant to the grading process. We only included the Java and XML layout files as they contain all the work done.
