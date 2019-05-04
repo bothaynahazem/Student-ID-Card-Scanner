@@ -314,5 +314,57 @@ public class ImgProcPipeline {
 
         return result;
     }
+    private static void transformCardToRect(Mat input_img, Mat output_img, MatOfPoint2f src, int FINAL_WIDTH, int FINAL_HEIGHT) {
 
+        // src(cardFourPtsContour is a matrix containing the corner points of the image to transform
+        //dst is a matrix containing the points that the corners in src are going to be mapped into
+
+        if (src.width() == 0 && src.height() == 0) //no pts were retrieved
+        {
+            Log.e(TAG, "No points were received from the \"getFourBoundaryPts\" method!");
+        }
+
+        int w = input_img.width();
+        int h = input_img.height();
+
+        MatOfPoint2f dst = new MatOfPoint2f(
+                new Point(0, 0), // tl
+                new Point(0, FINAL_HEIGHT), // bl
+                new Point(FINAL_WIDTH, FINAL_HEIGHT), // br
+                new Point(FINAL_WIDTH, 0) // tr
+
+        );
+
+        Mat P = new Mat();  //P is a temp variable
+        P = Imgproc.getPerspectiveTransform(src, dst);
+
+        //src –img1- input image.
+        //dst –output- output image that has the size dsize and the same type as src .
+        //M –P- 3\times 3 transformation matrix.
+        //size – size of the output image -  can be greater than the output image and corners around image will be black.
+        Imgproc.warpPerspective(input_img, output_img, P, new Size(FINAL_WIDTH, FINAL_HEIGHT));
+    }
+
+
+    private static void rotateImg(Mat src, Mat dst) {
+
+        if (src.cols() <= src.rows()) //already rotated
+        {
+            src.copyTo(dst); //hence don't rotate it
+        }
+
+        int angleNeg90 = 270; //when the img is taken in a "portrait mode", it's rotated by 270
+        double scale = 1.0;
+
+        Point center = new Point(src.cols() / 2.0, src.rows() / 2.0); //centre to be rotated about
+
+        Mat M = Imgproc.getRotationMatrix2D(center, angleNeg90, scale);
+
+        Size newSize = new Size(src.cols(), src.rows());
+        Imgproc.warpAffine(src, dst, M, newSize);
+
+    }
+
+    
+    
 }
